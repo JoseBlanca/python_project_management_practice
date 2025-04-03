@@ -1,10 +1,14 @@
 [project]
-name = "python-project-management-practice"
+name = "fastq_stats"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
 
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
 [project.scripts]
-calc_fastq_stats = "fastq_stats.calc_fastq_stats:main"
+calc_fastq_stats = "fastq_stats.script_calc_fastq_stats:main"

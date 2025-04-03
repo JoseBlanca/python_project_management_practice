@@ -29,3 +29,26 @@ $ uv run src/fastq_stats/hello.py
 uv should have run the script and it will have install Python, if it is not already installed.
 
 Also, uv should have created a virtual environment in the `.venv` directory. This is a directory that contains a copy of the Python interpreter and all the packages that are installed in it. This is useful to avoid conflicts between different projects that use different versions of the same package.
+
+## Install the fastq_stats package in the virtual environment
+
+The fastq_stats package, located in the `src/fastq_stats` directory, incudes a script that creates statistics from a set of fastq sequence files.
+
+To be able to run the calc_fastq_stats script, first you need to install the package in the virtual environment. To do this, you need to run the following command:
+
+```
+$ uv pip install -e .
+```
+
+Now you should be able to run the script:
+
+```
+$ uv run calc_fastq_stats
+Traceback (most recent call last):
+  File "/home/jose/docencia/python_project_management_practice/.venv/bin/calc_fastq_stats", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+TypeError: main() missing 2 required positional arguments: 'fastq_path' and 'json_stats_path'
+```
+
+## Let's write a program that creates statistics for all fastq files in a directory
