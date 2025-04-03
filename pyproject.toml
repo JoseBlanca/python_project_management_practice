@@ -5,3 +5,6 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = []
+
+[project.scripts]
+calc_fastq_stats = "fastq_stats.calc_fastq_stats:main"
